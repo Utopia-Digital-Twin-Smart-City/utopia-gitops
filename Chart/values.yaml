@@ -1,3 +1,5 @@
 replicaCount: 2
 image: 
-    repository: utopia-frontend
+    frontend-repository: utopia-frontend
+    backend-repository: utopia-backend
+    tag: v1
