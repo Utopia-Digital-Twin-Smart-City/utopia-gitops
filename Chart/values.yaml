@@ -1,4 +1,9 @@
 replicaCount: 2
+
+name:
+    frontend: utopia-frontend
+    backend: utopia-backend
+
 image: 
     frontend-repository: utopia-frontend
     backend-repository: utopia-backend
