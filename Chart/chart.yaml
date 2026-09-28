@@ -1,6 +1,6 @@
 apiVersion: v2
-name: nginx-chart
-description: A Helm chart for Kubernetes
+name: utopia
+description: A Helm chart for Kubernetes cluster for utopia
 
 #...
 type: application
