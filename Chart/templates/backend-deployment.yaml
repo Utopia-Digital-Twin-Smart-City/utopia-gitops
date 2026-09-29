@@ -1,0 +1,19 @@
+apiVersion: app/v1
+kind: Deployment
+metadata: 
+    name: {{ .Values.name.backend }}
+    labels:
+      {{- include "backend-labels" . }}
+spec:
+    replicas: {{ .Values.replicaCount }}
+    selector:
+        matchlabels:
+            {{- include "backend-labels" . | indent 2 }}
+    template:
+        metadata:
+            labels:
+                {{- include "backend-labels" . | indent 4 }}
+        spec:
+            containers:
+                - name: utopia-backend
+                  image: {{ .Values.image.backend-repository }}:{{ .Values.image.tag }}
